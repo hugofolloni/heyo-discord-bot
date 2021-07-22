@@ -1,3 +1,10 @@
+var express = require('express');
+var app = express();
+
+var port = process.env.PORT || 5000;
+
+app.listen(port);
+
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
@@ -14,11 +21,16 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	console.log('Ready!');
-    client.user.setPresence({game: {name: 'olhando tudo', type: 0}})
+    client.user.setActivity('.help para ver os comandos!')
 });
 
+client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
+	if (!channel) return;
+	channel.send(`Welcome to the server, ${member}`);
+  });
+
 client.on('message', message => {
-    console.log(message.content)
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -36,11 +48,36 @@ client.on('message', message => {
     
 });
 
+client.on('message', async message => {
+    // Voice only works in guilds, if the message does not come from a guild,
+    // we ignore it
+try {
+    if (!message.guild) return;
+
+    if (message.content.startsWith('.play') || message.content.startsWith('.p ') ) {
+        // Only try to join the sender's voice channel if they are in one themselves
+        if (message.member.voice.channel) {
+			const voiceChannel = message.member.voice.channel
+            const connection = await voiceChannel.join();
+            const args = message.content.split(' ').slice(1)
+            const ytdl = require('ytdl-core')
+            const dispatcher = connection.play(ytdl(args.join(" ")))
+			dispatcher.on('finish', () => voiceChannel.leave())
+			message.reply(`tocando ${args}.`)
+        } else {
+            message.reply('você precisa estar em um canal de voz!');
+        }
+    }
+} catch(e){
+console.log(e)
+}
+});
+
 client.on("message", async message => {
   if(message.content === `${prefix}ping`) {
     const m = await message.channel.send("Pong!");
 
-    message.channel.send(`O seu ping está em ${m.createdTimestamp - message.createdTimestamp}ms.`);
+    message.reply(`o seu ping está em ${m.createdTimestamp - message.createdTimestamp}ms.`);
   }
   
 });

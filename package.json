@@ -11,8 +11,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.5.3",
     "discord.js": "^12.5.3",
+    "express": "^4.17.1",
+    "ffmpeg-static": "^4.4.0",
     "node-fetch": "^2.6.1",
-    "yarn": "^1.22.10"
+    "open": "^8.2.1",
+    "openm": "^1.1.0",
+    "path": "^0.12.7",
+    "puppeteer": "^10.1.0",
+    "sudo": "^1.0.3",
+    "ytdl-core": "^4.9.0"
   }
 }
