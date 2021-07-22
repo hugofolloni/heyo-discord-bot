@@ -11,11 +11,15 @@ Para me adicionar ao seu servidor, use na imagem acima:
 ## COMANDOS
 #### Por enquanto não possui muitos comandos. Os atuais são:
 
+.champ (campeão) : retorna a página do op.gg coreano acerca do boneco do LoL.
+
 .cotacao (arg): Mostra a cotação atual de certa moeda convertida para reais (BRL). Por enquanto suporto o dólar americano (arg = USD), euro (arg = EUR) e bitcoin (arg = BTC).
 
 .criador : retorna meu nome, com meu link para o github.
 
 .docs : retorna para este site, mostrando projeto e documentação.
+
+.elo (região) (nick) : te retorna para a página do op.gg do jogador escolhido.
 
 .feedou (arg) : fala que (arg) feedou pela x vez (x é o número de vezes que o comando foi usado).
 
