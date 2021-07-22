@@ -33,7 +33,7 @@ Para me adicionar ao seu servidor, use na imagem acima:
 
 .ping : mostra sua latência em relação a mim (sou hospedado em solo estadunidense, vale ressaltar).
 
-.pokerandom : retorna um pokemon aleatório, com a página de pokedex dele.
+.pokemon : retorna um pokemon aleatório, com a página de pokedex dele.
 
 .p/.play (arg) : o bot entra no canal que você está e toca a sua música escolhida (arg). Infelizmente, so funciona com links e com o youtube (pretendo consertar isto depois).
 
