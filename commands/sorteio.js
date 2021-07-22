@@ -7,7 +7,7 @@ module.exports = {
 		} 
 
         var max = args.length
-        var sorteado = Math.floor(Math.random() * (max - 1)) + 1;
+        var sorteado = Math.floor(Math.random() * (max - 0)) + 0;
         message.reply(`o argumento sorteado foi ${args[sorteado]}`)
         
 	},

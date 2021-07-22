@@ -4,7 +4,7 @@ const path = require('path')
 const execute = async (message) => {
 	message.reply("estou indo pegá-la!")
 	message.channel.startTyping()
-	const browser = await puppeteer.launch({ headless: true })
+	const browser = await puppeteer.launch({ headless: true }, { args: ['--no-sandbox'] }, {ignoreDefaultArgs: ['--disable-extensions']})
 	const page = await browser.newPage()
 	await page.goto('https://pt.wikipedia.org/wiki/Especial:Aleat%C3%B3ria')
 	await page.screenshot({ path: path.join(__dirname, '../../HeyOBot/assets/randompage.png') })
