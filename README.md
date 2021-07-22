@@ -17,7 +17,7 @@
 
 .obrigado : agradecimento nosso por estar em seu servidor.
 
-.random (arg1) (arg2) : retorna um número aleatório entre o (arg1) e o (arg2).]
+.random (arg1) (arg2) : retorna um número aleatório entre o (arg1) e o (arg2).
 
 .ping : mostra sua latência em relação a mim (sou hospedado em solo estadunidense, vale ressaltar).
 
