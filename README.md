@@ -17,15 +17,33 @@ Para me adicionar ao seu servidor, use na imagem acima:
 
 .docs : retorna para este site, mostrando projeto e documentação.
 
+.feedou (arg) : fala que (arg) feedou pela x vez (x é o número de vezes que o comando foi usado).
+
+.gadeou (arg) : fala que (arg) gadeou pela x vez (x é o número de vezes que o comando foi usado).
+
 .help : retorna uma lista com todos os comandos aceitos e modo de uso.
+
+.leave : tira o bot da sala de voz em que estava.
 
 .obrigado : agradecimento nosso por estar em seu servidor.
 
-.random (arg1) (arg2) : retorna um número aleatório entre o (arg1) e o (arg2).
-
 .ping : mostra sua latência em relação a mim (sou hospedado em solo estadunidense, vale ressaltar).
 
-.servername : retorna o nome do servidor no qual estamos.
+.pokerandom : retorna um pokemon aleatório, com a página de pokedex dele.
+
+.p/.play (arg) : o bot entra no canal que você está e toca a sua música escolhida (arg). Infelizmente, so funciona com links e com o youtube (pretendo consertar isto depois).
+
+.quit : exclui o bot do seu servidor, antes deixando uma mensagem caso queira reintregrá-lo.
+
+.random (arg1) (arg2) : retorna um número aleatório entre o (arg1) e o (arg2).
+
+.server : retorna o nome do servidor, número total de pessoas e número de onlines (excluso bots).
+
+.sorteio (arg1) (arg2) (arg3)... : sorteia um dos argumentos que você colocou, separados por espaços.
+
+.user : sorteia um usuário aleatório do servidor.
+
+.wiki : retorna uma página aleatória da wikipédia.
 
 ## APIs
 Cotação: utilizo a api economia.awesomeapi.com.br/ para as conversões com cotaçoes em tempo real.
