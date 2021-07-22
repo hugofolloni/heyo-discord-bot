@@ -1,15 +1,14 @@
 module.exports = {
-	name: 'random',
+	name: 'sorteio',
 	description: 'Informe dois números (maior e menor, nesta ordem) que calcularei um valor inteiro aleatório entre eles.',
 	execute(message, args) {
 		if (!args.length) {
 			return message.channel.send(`Você não disse valores suficientes, ${message.author}! Busque a ajuda necessária no ".help"`);
 		} 
-        var min = args[0];
-        var max = args[1];
-		min = Math.ceil(min);
-  		max = Math.floor(max);
-        var random = Math.floor(Math.random() * (max - min)) + min;
-        message.reply(`seu número aleatório entre ${min} e ${max} é ${random}`);
+
+        var max = args.length
+        var sorteado = Math.floor(Math.random() * (max - 1)) + 1;
+        message.reply(`o argumento sorteado foi ${args[sorteado]}`)
+        
 	},
 };

@@ -1,0 +1,13 @@
+module.exports = {
+	name: 'champ',
+	description: 'Te leva até a documentação do bot',
+	execute(message, args) {
+		if (!args.length) {
+			return message.channel.send(`Você não disse valores suficientes, ${message.author}! Busque a ajuda necessária no ".help"`);
+		} 
+
+        var champ = args[0]
+
+        message.reply(`Aqui está a página do op.gg requerida:\nhttps://kr.op.gg/champion/${champ}/statistics`);
+	},
+};

@@ -1,15 +1,17 @@
+let i = 0;
+
 module.exports = {
-	name: 'random',
+	name: 'gadeou',
 	description: 'Informe dois números (maior e menor, nesta ordem) que calcularei um valor inteiro aleatório entre eles.',
 	execute(message, args) {
 		if (!args.length) {
 			return message.channel.send(`Você não disse valores suficientes, ${message.author}! Busque a ajuda necessária no ".help"`);
 		} 
-        var min = args[0];
-        var max = args[1];
-		min = Math.ceil(min);
-  		max = Math.floor(max);
-        var random = Math.floor(Math.random() * (max - min)) + min;
-        message.reply(`seu número aleatório entre ${min} e ${max} é ${random}`);
+
+        i++
+
+        var name = args[0]
+
+        message.channel.send(`${name} já foi gado por ${i} vezes.`);
 	},
 };

@@ -17,7 +17,7 @@ module.exports = {
         })
         .then(data =>{
             var preco = data.USDBRL.ask;
-            message.channel.send(`A cotação de 1 USD está em ${preco} BRL`)});
+            message.reply(`a cotação de 1 USD está em ${preco} BRL`)});
 	}
     else if(moeda === "EUR"){
 
@@ -30,7 +30,7 @@ module.exports = {
         })
         .then(data =>{
             var preco = data.EURBRL.ask;
-            message.channel.send(`A cotação de 1 EUR está em ${preco} BRL`)});
+            message.reply(`a cotação de 1 EUR está em ${preco} BRL`)});
 	}
     else if(moeda === "BTC"){
 
@@ -43,7 +43,7 @@ module.exports = {
         })
         .then(data =>{
             var preco = data.BTCBRL.ask + ' mil';
-            message.channel.send(`A cotação de 1 BTC está em ${preco} BRL` )});
+            message.reply(`a cotação de 1 BTC está em ${preco} BRL` )});
 	}
 },
 };
