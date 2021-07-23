@@ -1,6 +1,6 @@
 # Olá, este é o HeyO
 
-## Um bot interativa e descontraído para servidores no discord. 
+## Um bot interativo e descontraído para servidores no discord. 
 
 ### Foi programado por Hugo Folloni, tendo como tecnologia principal o Node.js (Discord.js).
 
