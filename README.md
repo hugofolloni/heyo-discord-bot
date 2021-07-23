@@ -2,11 +2,11 @@
 
 ## Um bot interativa e descontraído para servidores no discord. 
 
-### Foi programado por Hugo Folloni, tendo como tecnologia principal o Node.js.
+### Foi programado por Hugo Folloni, tendo como tecnologia principal o Node.js (Discord.js).
 
 [<img src="https://cdn.discordapp.com/attachments/867457879047929918/867830621467967578/ErG18llWMAAIziI.jpeg" alt="botpic" width="150"  />](https://discord.com/oauth2/authorize?client_id=867456901716246538&permissions=8&scope=bot)
 
-Para me adicionar ao seu servidor, use na imagem acima:
+Para me adicionar ao seu servidor, clique na imagem acima:
 
 ## COMANDOS
 #### Por enquanto não possui muitos comandos. Os atuais são:
