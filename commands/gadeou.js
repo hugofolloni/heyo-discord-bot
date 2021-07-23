@@ -2,7 +2,7 @@ let i = 0;
 
 module.exports = {
 	name: 'gadeou',
-	description: 'Informe dois números (maior e menor, nesta ordem) que calcularei um valor inteiro aleatório entre eles.',
+	description: 'Adiciona um ao número de vezes que alguém gadeou',
 	execute(message, args) {
 		if (!args.length) {
 			return message.channel.send(`Você não disse valores suficientes, ${message.author}! Busque a ajuda necessária no ".help"`);

@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'champ',
-	description: 'Te leva até a documentação do bot',
+	description: 'Te mostra o op.gg do campeão',
 	execute(message, args) {
 		if (!args.length) {
 			return message.channel.send(`Você não disse valores suficientes, ${message.author}! Busque a ajuda necessária no ".help"`);

@@ -27,7 +27,7 @@ client.once('ready', () => {
 client.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
 	if (!channel) return;
-	channel.send(`Welcome to the server, ${member}`);
+	channel.send(`Welcome to the server, ${member}!`);
   });
 
 client.on('message', message => {
@@ -49,21 +49,24 @@ client.on('message', message => {
 });
 
 client.on('message', async message => {
-    // Voice only works in guilds, if the message does not come from a guild,
-    // we ignore it
 try {
     if (!message.guild) return;
 
     if (message.content.startsWith('.play') || message.content.startsWith('.p ') ) {
-        // Only try to join the sender's voice channel if they are in one themselves
         if (message.member.voice.channel) {
-			const voiceChannel = message.member.voice.channel
+            const voiceChannel = message.member.voice.channel
             const connection = await voiceChannel.join();
             const args = message.content.split(' ').slice(1)
             const ytdl = require('ytdl-core')
             const dispatcher = connection.play(ytdl(args.join(" ")))
-			dispatcher.on('finish', () => voiceChannel.leave())
-			message.reply(`tocando ${args}.`)
+            dispatcher.on('finish', () => voiceChannel.leave())
+            if (args[0] === 'https://www.youtube.com/watch?v=o1OK8jOf0lE&ab_channel=EfeitoSonoro2'){
+              message.channel.send("Seu alarme deve tocar agora!")
+            }
+            else{
+              message.reply(`tocando ${args}.`)
+            }
+
         } else {
             message.reply('você precisa estar em um canal de voz!');
         }

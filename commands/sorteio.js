@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'sorteio',
-	description: 'Informe dois números (maior e menor, nesta ordem) que calcularei um valor inteiro aleatório entre eles.',
+	description: 'Sorteia um valor dentre os diversos indicados',
 	execute(message, args) {
 		if (!args.length) {
 			return message.channel.send(`Você não disse valores suficientes, ${message.author}! Busque a ajuda necessária no ".help"`);
