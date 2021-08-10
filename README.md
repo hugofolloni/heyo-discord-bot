@@ -49,6 +49,8 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 .sorteio (arg1) (arg2) (arg3)... : sorteia um dos argumentos que você colocou, separados por espaços.
 
+.spacex: retorna uma foto aleatória do último lançamento da SpaceX
+
 .user : sorteia um usuário aleatório do servidor.
 
 .wiki : retorna uma página aleatória da wikipédia.
