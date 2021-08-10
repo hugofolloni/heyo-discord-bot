@@ -14,7 +14,7 @@ module.exports = {
             var max = diretorio.length
             var sorteado = Math.floor(Math.random() * (max - 0)) + 0;
             var img = diretorio[sorteado]
-            message.reply(`Aqui está uma imagem do último lançamento da SpaceX:\n${img}`);
+            message.reply(`aqui está uma imagem do último lançamento da SpaceX:\n${img}`);
         
         });
 
