@@ -50,6 +50,7 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 .sorteio (arg1) (arg2) (arg3)... : sorteia um dos argumentos que você colocou, separados por espaços.
 
 .user : sorteia um usuário aleatório do servidor.
+.avatar @usuário>: exibe o avatar de um usuário mencionado.
 
 .wiki : retorna uma página aleatória da wikipédia.
 
