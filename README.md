@@ -59,9 +59,10 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 Cotação: utilizo a api https://economia.awesomeapi.com.br/ para as conversões com cotaçoes em tempo real.
 
-NASA: utilizo a api https://api.nasa.gov/ para coleta de imagens e descrições do banco de dados da NASA. Utilizamos a APOD, Mars Rover e NASA Image Library.
+NASA: utilizo a api https://api.nasa.gov/ para coleta de imagens do banco de dados da NASA. Utilizamos a APOD, Mars Rover e Image Library.
 
-ISS: utilizo a api http://api.open-notify.org/iss-now.json para encontrar a posição da ISS em tempo real.
+ISS: utilizo a api http://api.open-notify.org/iss-now.json para encontrar a posição da ISS em tempo real. Utilizamos também a API https://https://mapquestapi.com para encontrar sua posição no mapa.
+
 
 SpaceX: utilizo a api https://api.spacexdata.com/v4/launches/latest para encontrar dados sobre o último lançamento da SpaceX.
 
