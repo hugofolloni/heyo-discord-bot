@@ -8,8 +8,9 @@
 
 Para me adicionar ao seu servidor, clique na imagem acima:
 
+[ENGLISH VERSION](https://github.com/hugofolloni/HeyOBot/blob/main/english/README.md)
+
 ## COMANDOS
-#### Por enquanto não possui muitos comandos. Os atuais são:
 
 .alarm (xx:yy): cria uma alarme para a hora selecionada em até um dia de validade, no qual xx são horas e yy minutos, neste formato.
 
@@ -63,7 +64,7 @@ NASA: utilizo a api https://api.nasa.gov/ para coleta de imagens do banco de dad
 
 ISS: utilizo a api http://api.open-notify.org/iss-now.json para encontrar a posição da ISS em tempo real. Utilizamos também a API https://https://mapquestapi.com para encontrar sua posição no mapa.
 
-
 SpaceX: utilizo a api https://api.spacexdata.com/v4/launches/latest para encontrar dados sobre o último lançamento da SpaceX.
+
 
 
