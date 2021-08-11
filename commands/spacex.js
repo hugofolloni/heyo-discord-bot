@@ -1,3 +1,5 @@
+const Discord = require('discord.js')
+
 module.exports = {
 	name: 'spacex',
 	description: 'Envie',
@@ -14,7 +16,10 @@ module.exports = {
             var max = diretorio.length
             var sorteado = Math.floor(Math.random() * (max - 0)) + 0;
             var img = diretorio[sorteado]
-            message.reply(`aqui está uma imagem do último lançamento da SpaceX:\n${img}`);
+            const embed = new Discord.MessageEmbed()
+                .setImage(img)
+            message.reply("aqui está uma imagem do último lançamento da SpaceX:");
+            message.channel.send(embed);
         
         });
 
