@@ -14,6 +14,8 @@ Since it is a brazilian bot, it was made in portuguese. But here I explain the f
 
 .alarm (xx:yy): sets an alarm for the selected time. xx = hours, yy = minutes. You can only set it for a range of 23 hours and 59 minutes.
 
+.avatar (arg) : returns the profile picture from an user "@...".
+
 .champ (campeão) : returns the op.gg page from the League champion.
 
 .cotacao (arg): returns the current price for the selected currency converted to BRL (reais). BTC = Bitcoin, USD = Dolar, EUR = Euro. 
@@ -25,6 +27,8 @@ Since it is a brazilian bot, it was made in portuguese. But here I explain the f
 .elo (region) (nick) : shows the op.gg page from the selected player.
 
 .feedou (arg) : returns (arg) feedou (kill himself too much) for the current iteration of a variable, where (arg) is the name of a person.
+
+.freegame : shows the current free games for PC.
 
 .gadeou (arg) : returns (arg) gadeou (he love women too much) for the current iteration of a variable, where (arg) is the name of a person.
 
