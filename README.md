@@ -8,7 +8,7 @@
 
 Para me adicionar ao seu servidor, clique na imagem acima:
 
-[ENGLISH VERSION](https://github.com/hugofolloni/HeyOBot/blob/main/english/README.md)
+[ENGLISH VERSION](https://github.com/hugofolloni/HeyODiscordBot/blob/main/english/README.md)
 
 ## COMANDOS
 
