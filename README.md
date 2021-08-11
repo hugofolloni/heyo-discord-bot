@@ -28,6 +28,8 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 .feedou (arg) : fala que (arg) feedou pela x vez (x é o número de vezes que o comando foi usado).
 
+.freegame : mostra os jogos que estão grátis por conta de promoções para PC.
+
 .gadeou (arg) : fala que (arg) gadeou pela x vez (x é o número de vezes que o comando foi usado).
 
 .help : retorna uma lista com todos os comandos aceitos e modo de uso.
