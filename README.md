@@ -14,6 +14,8 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 .alarm (xx:yy): cria uma alarme para a hora selecionada em até um dia de validade, no qual xx são horas e yy minutos, neste formato.
 
+.avatar (arg) : mostra o avatar do usuário selecionado "@...".
+
 .champ (campeão) : retorna a página do op.gg coreana acerca do boneco do LoL.
 
 .cotacao (arg): Mostra a cotação atual de certa moeda convertida para reais (BRL). Por enquanto suporto o dólar americano (arg = USD), euro (arg = EUR) e bitcoin (arg = BTC).
