@@ -53,6 +53,7 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 .spacex: retorna uma foto aleatória do último lançamento da SpaceX
 
 .user : sorteia um usuário aleatório do servidor.
+.avatar @usuário>: exibe o avatar de um usuário mencionado.
 
 .wiki : retorna uma página aleatória da wikipédia.
 
