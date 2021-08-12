@@ -36,7 +36,7 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 .leave : tira o bot da sala de voz em que estava.
 
-.nasa (arg): retorna alguma imagem obtida pela API da NASA. 'daily' = foto do dia. 'mars' = foto de sonda em solo marciano. 'pic (arg2) = foto da pesquisa 'arg2'. 'iss' = posição da Estação Espacial Internacional.
+.nasa (arg): retorna alguma imagem obtida pela API da NASA. 'daily' = foto do dia. 'mars' = foto de sonda em solo marciano. 'pic (arg2) = foto da pesquisa 'arg2' (use "-" para separar palavras). 'iss' = posição da Estação Espacial Internacional.
 
 .obrigado : agradecimento nosso por estar em seu servidor.
 
