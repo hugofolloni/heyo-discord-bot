@@ -12,7 +12,7 @@ module.exports = {
         if(busca === "daily"){
             const fetch = require("node-fetch")
 
-            var api = `https://api.nasa.gov/planetary/apod?api_key=N66cUduqd00HfD4316gSgSsyWxO6FpfwloxOOcvZ`
+            var api = `https://api.nasa.gov/planetary/apod?api_key=API_KEY`
             fetch(api)
             .then(response =>{
                 return response.json();
@@ -31,7 +31,7 @@ module.exports = {
         if(busca === "mars"){
             const fetch = require("node-fetch")
 
-            var api = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=N66cUduqd00HfD4316gSgSsyWxO6FpfwloxOOcvZ`
+            var api = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=API_KEY`
             fetch(api)
             .then(response => {
                 return response.json();
@@ -89,7 +89,7 @@ module.exports = {
             .then(data =>{
                 var latitude = data.iss_position.latitude;
                 var longitude = data.iss_position.longitude;
-                var mapApi = `https://www.mapquestapi.com/staticmap/v5/map?key=Ni2ADHDUCU3MFwVbERoz6VC0jiYwgpI2&center=${latitude},${longitude}&zoom=2&type=hyb&size=600,400@2x`
+                var mapApi = `https://www.mapquestapi.com/staticmap/v5/map?key=API_KEY&center=${latitude},${longitude}&zoom=2&type=hyb&size=600,400@2x`
                 const embed = new Discord.MessageEmbed()
                     .setImage(mapApi)
                 message.reply(`a ISS está sobre a latitude ${latitude} e a longitude ${longitude}. Ela está sobre centro desta imagem:`)
