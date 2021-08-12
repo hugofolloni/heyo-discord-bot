@@ -36,7 +36,7 @@ Since it is a brazilian bot, it was made in portuguese. But here I explain the f
 
 .leave : kicks the bot from the current voice channel.
 
-.nasa (arg): returns some image get from NASA API. 'daily' = Astronomic Picture of the Day. 'mars' = Mars rover photo. 'pic' (arg2) = searches a 'arg2' photo. iss = current position from International Space Station
+.nasa (arg): returns some image get from NASA API. 'daily' = Astronomic Picture of the Day. 'mars' = Mars rover photo. 'pic' (arg2) = searches a 'arg2' photo (uses '-' to separate words). iss = current position from International Space Station
 
 .obrigado : A thanks for being in your server.
 
