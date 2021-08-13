@@ -36,7 +36,7 @@ Since it is a brazilian bot, it was made in portuguese. But here I explain the f
 
 .leave : kicks the bot from the current voice channel.
 
-.nasa (arg): returns some image get from NASA API. 'daily' = Astronomic Picture of the Day. 'mars' = Mars rover photo. 'pic' (arg2) = searches a 'arg2' photo (uses '-' to separate words). iss = current position from International Space Station
+.nasa (arg): returns some image get from NASA API. 'daily' = Astronomic Picture of the Day. 'mars' = Mars rover photo. 'pic' (arg2) = searches a 'arg2' photo (uses '-' to separate words). iss = current position from International Space Station.
 
 .obrigado : A thanks for being in your server.
 
@@ -66,6 +66,6 @@ Cotação: I use the https://economia.awesomeapi.com.br/  api to convert currenc
 
 NASA: I use https://api.nasa.gov/ api to get images from NASA database. We use APOD, Mars Rover and Image Library.
 
-ISS: I use http://api.open-notify.org/iss-now.json api to get the current ISS position. We use the https://https://mapquestapi.com API too, to show it on the map.
+ISS: I use http://api.open-notify.org/iss-now.json api to get the current ISS position. We use the https://mapquestapi.com API too, to show it on the map.
 
 SpaceX: I use https://api.spacexdata.com/v4/launches/latest API, to find data from the latest SpaceX mission.
