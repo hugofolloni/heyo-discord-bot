@@ -70,5 +70,9 @@ ISS: utilizo a api http://api.open-notify.org/iss-now.json para encontrar a posi
 
 SpaceX: utilizo a api https://api.spacexdata.com/v4/launches/latest para encontrar dados sobre o último lançamento da SpaceX.
 
+## DiscordUFRJBot
 
+PS: existe uma versão desse bot (com a mesma base) feita para o Discord da turma de Ciência da Computação 2021.1 da UFRJ.
+
+[DiscordBotUFRJ](https://github.com/hugofolloni/DiscordBotUFRJ)
 
