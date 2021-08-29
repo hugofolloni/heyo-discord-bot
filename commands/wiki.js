@@ -1,21 +1,50 @@
-const puppeteer = require('puppeteer')
-const path = require('path')
+const axios = require('axios');
+const cheerio = require('cheerio');
 
 const execute = async (message) => {
-	message.reply("estou indo pegá-la!")
-	message.channel.startTyping()
-	const browser = await puppeteer.launch({ headless: true }, { args: ['--no-sandbox'] }, {ignoreDefaultArgs: ['--disable-extensions']})
-	const page = await browser.newPage()
-	await page.goto('https://pt.wikipedia.org/wiki/Especial:Aleat%C3%B3ria')
-	await page.screenshot({ path: path.join(__dirname, '../../HeyOBot/assets/randompage.png') })
-	await page.close()
-	await browser.close()
-	message.channel.stopTyping()
-	message.channel.send('Aqui está a sua página aleatória da wikipédia:', { files: [path.join(__dirname, '../../HeyOBot/assets/randompage.png')] })
-}
+        try {
+            const { data } = await axios.get(
+                `https://pt.wikipedia.org/wiki/Especial:Aleat%C3%B3ria`
+            );
+            const $ = cheerio.load(data);
+           
+            var title = []
+            $('.firstHeading').each((_idx, el) => {
+                var heading = $(el).text()
+                title.push(heading)
+            })
+            var pageHeading = title[0]
+
+            var textList = []
+            $('.mw-parser-output > p').each((_idx, el) => {
+                const bodyPart = $(el).text()
+				textList.push(bodyPart)
+            });
+			var stringText = String(textList[0])
+            if(stringText == ""){
+                return message.reply("desculpe, mas esse tópico está quebrado. Tente novamente!")
+            }
+			if(stringText.length > 3000){
+				var splitedString = stringText.split("")
+				stringText = ''
+				for(i=0; i < 3000; i++){
+					stringText = stringText + splitedString[i]
+				}
+                stringText = stringText + "..."
+			}
+
+            var pageLinkToCreate = pageHeading.split(' ')
+            pageLink = pageLinkToCreate.join('_')
+
+			message.reply(`o resumo do seu tópico aleatório ${pageHeading} é: \n\n${stringText}\n\n ||https://pt.wikipedia.org/wiki/${pageLink}||`)
+
+        } catch (error) {
+            throw error;
+        }
+};
 
 module.exports = {
-  name: 'wiki',
-  help: 'Exibe uma página aleatória da wikipedia',
+  name: 'random',
+  help: 'Retorna uma página aleatória da Wikipédia',
   execute
 }
