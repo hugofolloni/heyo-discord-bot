@@ -58,7 +58,7 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 .user : sorteia um usuário aleatório do servidor.
 
-.wiki : retorna uma página aleatória da wikipédia.
+.wiki : retorna uma página da wikipédia, aleatória (sem args) ou escolhida (sem acentuação ou pontuação).
 
 ## APIs
 

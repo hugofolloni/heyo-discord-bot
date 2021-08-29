@@ -58,7 +58,7 @@ Since it is a brazilian bot, it was made in portuguese. But here I explain the f
 
 .user : choose a random user from the server.
 
-.wiki : returns a wikipedia page.
+.wiki : returns a wikipedia page, random (no args) or choosen (please, just letters, no signals).
 
 ## APIs
 
