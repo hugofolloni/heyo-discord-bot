@@ -8,7 +8,7 @@
 
 Para me adicionar ao seu servidor, clique na imagem acima:
 
-[ENGLISH VERSION](https://github.com/hugofolloni/HeyODiscordBot/blob/main/english/README.md)
+[ENGLISH VERSION](https://github.com/hugofolloni/heyo-discord-bot/blob/main/english/README.md)
 
 ## COMANDOS
 
@@ -74,5 +74,5 @@ SpaceX: utilizo a api https://api.spacexdata.com/v4/launches/latest para encontr
 
 PS: existe uma versão desse bot (com a mesma base) feita para o Discord da turma de Ciência da Computação 2021.1 da UFRJ.
 
-[DiscordBotUFRJ](https://github.com/hugofolloni/DiscordBotUFRJ)
+[DiscordBotUFRJ](https://github.com/hugofolloni/discord-ufrj-bot)
 
