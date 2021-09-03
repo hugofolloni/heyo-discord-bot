@@ -6,7 +6,7 @@ module.exports = {
     execute(message) {
         const fetch = require("node-fetch")
 
-        var api = `https://argus-api.vercel.app/api/game`
+        var api = `https://argus-project.vercel.app/api/game`
         fetch(api)
         .then(response =>{
             return response.json();D
