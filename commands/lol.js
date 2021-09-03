@@ -1,5 +1,3 @@
-riotApiKey = 'RGAPI-3b7c9e50-e6d9-4f85-8609-e3b84f1d6fb9' 
-
 const Discord = require('discord.js');
 
 const execute = async (message, args) => {
