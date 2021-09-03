@@ -24,8 +24,6 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 .docs : retorna para este site, mostrando projeto e documentação.
 
-.elo (região) (nick) : te retorna para a página do op.gg do jogador escolhido.
-
 .feedou (arg) : fala que (arg) feedou pela x vez (x é o número de vezes que o comando foi usado).
 
 .freegame : mostra os jogos que estão grátis por conta de promoções para PC.
@@ -35,6 +33,8 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 .help : retorna uma lista com todos os comandos aceitos e modo de uso.
 
 .leave : tira o bot da sala de voz em que estava.
+
+.lol : mostra dados do lol sobre o invocador (nick) (região)
 
 .nasa (arg): retorna alguma imagem obtida pela API da NASA. 'daily' = foto do dia. 'mars' = foto de sonda em solo marciano. 'pic (arg2) = foto da pesquisa 'arg2' (use "-" para separar palavras). 'iss' = posição da Estação Espacial Internacional.
 
