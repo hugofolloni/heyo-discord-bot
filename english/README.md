@@ -24,8 +24,6 @@ Since it is a brazilian bot, it was made in portuguese. But here I explain the f
 
 .docs : returns to the portuguese documentation for this bot.
 
-.elo (region) (nick) : shows the op.gg page from the selected player.
-
 .feedou (arg) : returns (arg) feedou (kill himself too much) for the current iteration of a variable, where (arg) is the name of a person.
 
 .freegame : shows the current free games for PC.
@@ -35,6 +33,8 @@ Since it is a brazilian bot, it was made in portuguese. But here I explain the f
 .help : returns a list from all commands.
 
 .leave : kicks the bot from the current voice channel.
+
+.lol (nick) (region) : shows info about the League player.
 
 .nasa (arg): returns some image get from NASA API. 'daily' = Astronomic Picture of the Day. 'mars' = Mars rover photo. 'pic' (arg2) = searches a 'arg2' photo (uses '-' to separate words). iss = current position from International Space Station.
 
