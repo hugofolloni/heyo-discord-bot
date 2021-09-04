@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 
 const execute = async (message, args) => {
@@ -7,11 +8,9 @@ const execute = async (message, args) => {
 
     var playerName = args[0]
 
-    var region = args[1]
-
     const fetch = require("node-fetch")
 
-    var apiSummoner = `https://${region}1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${playerName}?api_key=${riotApiKey}`
+    var apiSummoner = `https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${playerName}?api_key=${riotApiKey}`
 
 
     fetch(apiSummoner)
@@ -23,7 +22,7 @@ const execute = async (message, args) => {
 
         var playerName = data.name
 
-        var playerRegion = region.toUpperCase()
+        var playerRegion = 'BR'
 
         var summonerLevel = data.summonerLevel
 
@@ -67,7 +66,7 @@ const execute = async (message, args) => {
                     .setTitle(`:joystick: Perfil de ${playerName}`)
                     .setThumbnail(`https://ddragon.leagueoflegends.com/cdn/11.16.1/img/profileicon/${summonerIcon}.png`)
                     .setDescription('Aqui está o que você procura:')
-                    .addField('Nível / Região', `${summonerLevel} / ${region.toUpperCase()}`)
+                    .addField('Nível / Região', `${summonerLevel} / ${playerRegion.toUpperCase()}`)
                     .addField('Ranqueada','O invocador ainda não possui nível ranqueado.')
                     .addField('Maestrias',`**[${firstMasteryLevel}]** ${firstChamp} - ${firstMasteryPoints}\n**[${secMasteryLevel}]** ${secondChamp} - ${secMasteryPoints}\n**[${thdMasteryLevel}]** ${thirdChamp} - ${thdMasteryPoints}`)
                     .addField("Página op.gg do invocador:", `||https://${playerRegion}.op.gg/summoner/userName=${playerName}||`)
@@ -92,7 +91,7 @@ const execute = async (message, args) => {
                     .setTitle(`:joystick: Perfil de ${playerName}`)
                     .setThumbnail(`https://ddragon.leagueoflegends.com/cdn/11.16.1/img/profileicon/${summonerIcon}.png`)
                     .setDescription('Aqui está o que você procura:')
-                    .addField('Nível / Região', `${summonerLevel} / ${region.toUpperCase()}`)
+                    .addField('Nível / Região', `${summonerLevel} / ${playerRegion.toUpperCase()}`)
                     .addFields(
                             {name: `Ranqueada ${firstQueue}`, value:`*${formatted1stTier} ${firstRank}*\n${firstLP} PDL / Winrate: ${firstWR}%`, inline : true},
                         )
@@ -133,7 +132,7 @@ const execute = async (message, args) => {
                     .setTitle(`:joystick: Perfil de ${playerName}`)
                     .setThumbnail(`https://ddragon.leagueoflegends.com/cdn/11.16.1/img/profileicon/${summonerIcon}.png`)
                     .setDescription('Aqui está o que você procura:')
-                    .addField('Nível / Região', `${summonerLevel} / ${region.toUpperCase()}`)
+                    .addField('Nível / Região', `${summonerLevel} / ${playerRegion.toUpperCase()}`)
                     .addFields(
                             {name: `Ranqueada ${firstQueue}`, value:`*${formatted1stTier} ${firstRank}*\n${firstLP} PDL / Winrate: ${firstWR}%`, inline : true},
                             {name: '\u200B', value: '\u200B', inline:true },
