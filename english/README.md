@@ -56,6 +56,8 @@ Since it is a brazilian bot, it was made in portuguese. But here I explain the f
 
 .spacex: returns a random picture from the latest SpaceX mission.
 
+.tempo (location) : returns the forecast and current climate data of the wanted location.
+
 .user : choose a random user from the server.
 
 .wiki : returns a wikipedia page, random (no args) or choosen (please, just letters, no signals).

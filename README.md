@@ -56,6 +56,8 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 .spacex: retorna uma foto aleatória do último lançamento da SpaceX
 
+.tempo (local) : retorn as condições climáticas para a área desejada.
+
 .user : sorteia um usuário aleatório do servidor.
 
 .wiki : retorna uma página da wikipédia, aleatória (sem args) ou escolhida (sem acentuação ou pontuação).
