@@ -1,5 +1,3 @@
-const apiKey = '%2022370fad94b44b3c94300446211806'
-
 const Discord = require('discord.js');
 
 const execute = async (message, args) => {
@@ -16,43 +14,49 @@ const execute = async (message, args) => {
         return response.json();
     })
     .then(data =>{
-        var region = data.location.name;
-        var country = data.location.country;
-        var location = region + ', ' + country;
-        var localtime = data.location.localtime.split(' ')[1];
-        var today = data.location.localtime.split(' ')[0].split('-').reverse().join('/')
+        const region = data.location.name;
+        const country = data.location.country;
+        const location = region + ', ' + country;
+        const localtime = data.location.localtime.split(' ')[1];
+        const today = data.location.localtime.split(' ')[0].split('-').reverse().join('/')
 
-        var isDayBinary = data.current.is_day;
+        const isDayBinary = data.current.is_day;
         if(isDayBinary == 1){
             var isDay = "Está de dia"
         }
         else if(isDayBinary == 0){
             var isDay = "Está de noite"
         }
-        var todayFinder = data.forecast.forecastday[0];
 
-        var currentCondition = data.current.condition.text;
-        var currentIcon = data.current.condition.icon;
-        var iconLink = currentIcon.split('').splice(2, (Number(currentIcon.length) - 2)).join('')
-        var currentTemperature = data.current.temp_c + " °C";
-        var currentFeelsLike =  data.current.feelslike_c + " °C";
-        var currentWindSpeed = data.current.wind_kph + "km/h";
-        var currentMinTemperature = todayFinder.day.mintemp_c + " °C";
-        var currentMaxTemperature = todayFinder.day.maxtemp_c + " °C";
-        var currentChanceOfRain = todayFinder.day.daily_chance_of_rain + '%';
-        var currentSunrise = todayFinder.astro.sunrise;
-        var currentSunset = todayFinder.astro.sunset;
+        const todayFinder = data.forecast.forecastday[0];
 
-        var tomorrowFinder =  data.forecast.forecastday[1];
+        var icon = data.current.condition.icon;
+        var iconLink = icon.split('').splice(2, (Number(icon.length) - 2)).join('');
+
+        const current = {
+            condition: data.current.condition.text,
+            temperature: data.current.temp_c + " °C",
+            minTemperature: todayFinder.day.mintemp_c + " °C",
+            feelsLike: data.current.feelslike_c + " °C",
+            maxTemperature: todayFinder.day.maxtemp_c + " °C",
+            windSpeed: data.current.wind_kph + "km/h",
+            chanceOfRain: todayFinder.day.daily_chance_of_rain + '%',
+            sunrise: todayFinder.astro.sunrise,
+            sunset: todayFinder.astro.sunset,
+        }
     
-        var tomorrowDate = tomorrowFinder.date.split('-').reverse().join('/')
-        var tomorrowAverageTemperature = tomorrowFinder.day.avgtemp_c + " °C";
-        var tomorrowMinTemperature = tomorrowFinder.day.mintemp_c + " °C";
-        var tomorrowMaxTemperature = tomorrowFinder.day.maxtemp_c + " °C";
-        var tomorrowChanceOfRain = tomorrowFinder.day.daily_chance_of_rain + '%';
-        var tomorrowCondition = tomorrowFinder.day.condition.text;
-        var tomorrowSunrise = tomorrowFinder.astro.sunrise;
-        var tomorrowSunset = tomorrowFinder.astro.sunset;
+        const tomorrowFinder =  data.forecast.forecastday[1];
+    
+        const tomorrow = {
+            date: tomorrowFinder.date.split('-').reverse().join('/'),
+            averageTemperature: tomorrowFinder.day.avgtemp_c + " °C",
+            minTemperature: tomorrowFinder.day.mintemp_c + " °C",
+            maxTemperature: tomorrowFinder.day.maxtemp_c + " °C",
+            chanceOfRain: tomorrowFinder.day.daily_chance_of_rain + '%',
+            condition: tomorrowFinder.day.condition.text,
+            sunrise: tomorrowFinder.astro.sunrise,
+            sunset: tomorrowFinder.astro.sunset
+        }
 
         const embed = new Discord.MessageEmbed()
                     .setColor('#993399')
@@ -60,16 +64,16 @@ const execute = async (message, args) => {
                     .setDescription(`${location}`)
                     .setThumbnail(`https://${iconLink}`)
                     .addFields(
-                            {name: `Hoje — ${today} — ${localtime}`, value:`\n**Situação climática**:\n${currentCondition}.\n**${isDay}.**\n**Chance de chuva:** ${currentChanceOfRain}\n**Velocidade do vento:** ${currentWindSpeed}`, inline : true},
+                            {name: `Hoje — ${today} — ${localtime}`, value:`\n**Situação climática**:\n${current.condition}.\n**${isDay}.**\n**Chance de chuva:** ${current.chanceOfRain}\n**Velocidade do vento:** ${current.windSpeed}`, inline : true},
                             {name: '\u200B', value: '\u200B', inline:true },
-                            {name: `Temperaturas`, value:`**Temperatura atual:** ${currentTemperature}\n**Sensação térmica:** ${currentFeelsLike}\n**Máxima:** ${currentMaxTemperature} — **Mínima:** ${currentMinTemperature}`, inline : true},
+                            {name: `Temperaturas`, value:`**Temperatura atual:** ${current.temperature}\n**Sensação térmica:** ${current.feelsLike}\n**Máxima:** ${current.maxTemperature} — **Mínima:** ${current.minTemperature}`, inline : true},
                         )
                     .addFields(
-                        {name: `Amanhâ — ${tomorrowDate}`, value:`**Condição climática provável:**\n${tomorrowCondition}.\n**Chance de chuva:** ${tomorrowChanceOfRain}.`, inline: true},
+                        {name: `Amanhâ — ${tomorrow.date}`, value:`**Condição climática provável:**\n${tomorrow.condition}.\n**Chance de chuva:** ${tomorrow.chanceOfRain}.`, inline: true},
                         {name: '\u200B', value: '\u200B', inline:true},
-                        {name: `Amanhã`, value:`**Média:** ${tomorrowAverageTemperature}\n**Máxima:** ${tomorrowMaxTemperature} — **Mínima:** ${tomorrowMinTemperature}`, inline : true},
+                        {name: `Amanhã`, value:`**Média:** ${tomorrow.averageTemperature}\n**Máxima:** ${tomorrow.maxTemperature} — **Mínima:** ${tomorrow.minTemperature}`, inline : true},
                     )
-                    .addField("Amanhecer — Anoitecer", `**Hoje:** ${currentSunrise} — ${currentSunset}\n**Amanhã:** ${tomorrowSunrise} — ${tomorrowSunset}`)
+                    .addField("Amanhecer — Anoitecer", `**Hoje:** ${current.sunrise} — ${current.sunset}\n**Amanhã:** ${tomorrow.sunrise} — ${tomorrow.sunset}`)
                 message.channel.send(embed) 
     })
 
@@ -80,3 +84,5 @@ module.exports = {
 	description: 'Te mostra dados climáticos da localização pesquisada.',
 	execute,
 }
+
+
