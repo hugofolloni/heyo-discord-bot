@@ -1,5 +1,5 @@
 var playerArray = [];
-var rodada = 1;
+var rodada = 0;
 
 const execute = async (message, args) => {
     if (!args.length) {
@@ -51,7 +51,6 @@ const execute = async (message, args) => {
                 var naipeName = 'Espadas'
                 break;
         }
-        console.log(cardName, cardValue)
         message.channel.send(`Sua carta é: **${cardName} de ${naipeName}**!`); 
         rodada++;
     }
@@ -59,7 +58,7 @@ const execute = async (message, args) => {
 
     if(decision == 'start'){ 
         playerArray = []; 
-        rodada = 1;
+        rodada = 0;
         message.reply("Bem vindo ao **BLACKJACK**!\nSeu objetivo é chegar os 21 pontos.") 
         getCard(); 
         getSum(); 
@@ -70,8 +69,7 @@ const execute = async (message, args) => {
         if(rodada == 1){
             message.reply(`você não começou um jogo ainda!`)
         } 
-        else{
-            console.log(rodada) 
+        else{ 
             getCard(); 
             getSum();
         }
@@ -82,7 +80,6 @@ const execute = async (message, args) => {
         if(rodada == 1){
             message.reply(`você não começou um jogo ainda!`)
         } 
-        console.log(rodada);
         const soma = playerArray.reduce((total, currentElement) => total + currentElement);
         message.channel.send(`Você decidiu parar! Sua soma é de ${soma}!\nAgora o dealer vai jogar!`);
         dealerGame();
@@ -91,7 +88,7 @@ const execute = async (message, args) => {
 
     if(decision == 'hard-reset'){
         playerArray = [];
-        rodada = 1;
+        rodada = 0;
         message.reply(`o jogo atual de Blackjack sofreu um hard reset!`);
     }
 
@@ -144,7 +141,7 @@ const execute = async (message, args) => {
             message.reply(`\n** ### !!VOCÊ PERDEU!! ### **\nSua soma: ${soma}\nSoma do Dealer: ${somaDealer}\n                       **:(**`);
         }
         playerArray = [];
-        rodada = 1;
+        rodada = 0;
     }
 }
 
