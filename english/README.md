@@ -16,6 +16,8 @@ Since it is a brazilian bot, it was made in portuguese. But here I explain the f
 
 .avatar (arg) : returns the profile picture from an user "@...".
 
+.blackjack (arg) : mini-game blackjack game. '.blackjack help' to see what to do.
+
 .champ (campeão) : returns the op.gg page from the League champion.
 
 .cotacao (arg): returns the current price for the selected currency converted to BRL (reais). BTC = Bitcoin, USD = Dolar, EUR = Euro. 
