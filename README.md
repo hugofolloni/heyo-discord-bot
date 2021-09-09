@@ -16,6 +16,7 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 .avatar (arg) : mostra o avatar do usuário selecionado "@...".
 
+.blackjack (arg) : um mini-game de Blackjack para passar o tempo. arg ='start' começa o jogo, arg = 'pedir' pede carta, arg = 'parar' para e arg = 'help' abre ajuda do comando.
 .champ (campeão) : retorna a página do op.gg coreana acerca do boneco do LoL.
 
 .cotacao (arg): Mostra a cotação atual de certa moeda convertida para reais (BRL). Por enquanto suporto o dólar americano (arg = USD), euro (arg = EUR) e bitcoin (arg = BTC).
