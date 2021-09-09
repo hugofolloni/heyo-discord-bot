@@ -59,14 +59,14 @@ const execute = async (message, args) => {
     if(decision == 'start'){ 
         playerArray = []; 
         rodada = 0;
-        message.reply("\n\nBem vindo ao **BLACKJACK**!\nSeu objetivo é chegar os 21 pontos.") 
+        message.reply("\n\n     **Bem vindo ao BLACKJACK**!\n\nSeu objetivo é chegar os 21 pontos.") 
         getCard(); 
         getSum(); 
     }
 
 
     if(decision == 'pedir'){
-        if(rodada == 1){
+        if(rodada == 0){
             message.reply(`você não começou um jogo ainda!`)
         } 
         else{ 
@@ -77,7 +77,7 @@ const execute = async (message, args) => {
 
 
     if(decision == 'parar'){
-        if(rodada == 1){
+        if(rodada == 0){
             message.reply(`você não começou um jogo ainda!`)
         } 
         const soma = playerArray.reduce((total, currentElement) => total + currentElement);
