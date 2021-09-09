@@ -59,7 +59,7 @@ const execute = async (message, args) => {
     if(decision == 'start'){ 
         playerArray = []; 
         rodada = 0;
-        message.reply("Bem vindo ao **BLACKJACK**!\nSeu objetivo é chegar os 21 pontos.") 
+        message.reply("\n\nBem vindo ao **BLACKJACK**!\nSeu objetivo é chegar os 21 pontos.") 
         getCard(); 
         getSum(); 
     }
@@ -132,13 +132,13 @@ const execute = async (message, args) => {
         message.channel.send(`A soma do Dealer foi: ${somaDealer}`)
         const soma = playerArray.reduce((total, currentElement) => total + currentElement)
         if(soma > somaDealer){
-            message.reply(`\n** ### !!VOCÊ VENCEU!! ### **\nSua soma: ${soma}\nSoma do Dealer: ${somaDealer}\n                       **$$$**`);
+            message.reply(`\n\n** ### !!VOCÊ VENCEU!! ### **\nSua soma: ${soma}\nSoma do Dealer: ${somaDealer}\n                       **$$$**`);
         } 
         else if(soma == somaDealer){
-            message.reply(`\n** ### !!TEMOS UM EMPATE!! ### **\nSua soma: ${soma}\nSoma do Dealer: ${somaDealer}\n                       **;-;**`);
+            message.reply(`\n\n** ### !!TEMOS UM EMPATE!! ### **\nSua soma: ${soma}\nSoma do Dealer: ${somaDealer}\n                       **;-;**`);
         }
         else if(soma < somaDealer){
-            message.reply(`\n** ### !!VOCÊ PERDEU!! ### **\nSua soma: ${soma}\nSoma do Dealer: ${somaDealer}\n                       **:(**`);
+            message.reply(`\n\n** ### !!VOCÊ PERDEU!! ### **\nSua soma: ${soma}\nSoma do Dealer: ${somaDealer}\n                       **:(**`);
         }
         playerArray = [];
         rodada = 0;
