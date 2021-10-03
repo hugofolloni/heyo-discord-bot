@@ -1,6 +1,6 @@
 # heyo-discord-bot
 
-## 🕹️ About this project
+## 🕹️ Sobre este projeto
 ### Um bot interativo e descontraído para servidores no discord. 
 
 Foi programado por Hugo Folloni, tendo como tecnologia principal o Node.js (Discord.js).
@@ -11,11 +11,11 @@ Para me adicionar ao seu servidor, clique na imagem acima:
 
 [ENGLISH VERSION](https://github.com/hugofolloni/heyo-discord-bot/blob/main/english/README.md)
 
-## 📓 COMANDOS
+## 📓 Comandos
 
-A lita com os comandos está [aqui](https://github.com/hugofolloni/heyo-discord-bot/blob/main/commands-list.md)
+A lista com os comandos está [aqui](https://github.com/hugofolloni/heyo-discord-bot/blob/main/commands-list.md)!
 
-## 💻 Technologies
+## 💻 Tecnologias
 
 - Node.js
 - Express
